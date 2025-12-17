@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>جمعية زاهد الخيرية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body, button, input, textarea, select {
+        font-family: 'Cairo', sans-serif !important;
+      }
+
+      /* Custom Scrollbar Styling */
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e1 transparent;
+      }
+      
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+        margin: 4px;
+      }
+      
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #94a3b8;
+      }
+
+      /* Mobile: Hide Scrollbar Visuals but allow scrolling */
+      @media (max-width: 768px) {
+        .custom-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .custom-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      }
+
+      /* PDF Export Specific Styles */
+      .printing-mode {
+        background-color: white !important;
+        padding: 40px !important;
+        width: 1200px !important; /* Force desktop width for PDF capture */
+        margin: 0 auto !important;
+      }
+
+      .printing-mode .no-print-export {
+        display: none !important;
+      }
+
+      .printing-mode .show-on-print-export {
+        display: block !important;
+      }
+
+      /* Convert Dark Cards to White with Border for Print */
+      .printing-mode .bg-slate-900 {
+        background-color: white !important;
+        border: 2px solid #1e293b !important;
+        color: #1e293b !important;
+        box-shadow: none !important;
+      }
+      
+      .printing-mode .bg-slate-900 h3, 
+      .printing-mode .bg-slate-900 p,
+      .printing-mode .bg-slate-900 span {
+        color: #1e293b !important;
+      }
+
+      .printing-mode .text-emerald-400 {
+        color: #059669 !important; /* Darker green for print visibility */
+      }
+
+      .printing-mode .text-white {
+        color: #1e293b !important;
+      }
+
+      .printing-mode .shadow-sm, 
+      .printing-mode .shadow-md, 
+      .printing-mode .shadow-lg, 
+      .printing-mode .shadow-2xl {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          background-color: white !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        
+        /* Reset margins and paddings for main layout */
+        main {
+          margin-right: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+        }
+
+        /* Clean up table for print */
+        table {
+          width: 100% !important;
+          border-collapse: collapse !important;
+        }
+        
+        /* Remove shadows and rounded corners to save ink and look professional */
+        .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+          box-shadow: none !important;
+        }
+        .rounded-xl, .rounded-2xl, .rounded-3xl {
+          border-radius: 0 !important;
+          border: none !important;
+        }
+        
+        /* Ensure text is dark enough */
+        .text-slate-400, .text-slate-500 {
+          color: #334155 !important;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#e6f2ff',   // Very light blue
+                100: '#cce5ff',  // Light blue
+                200: '#99cbff',  // Soft blue
+                500: '#3399ff',  // Lighter accent
+                600: '#0079F6',  // Main Brand Color
+                700: '#0062c7',  // Hover state
+                800: '#004b99',  // Dark blue
+                900: '#00356b',  // Very dark blue
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?external=react,react-dom",
+    "recharts": "https://esm.sh/recharts@2.13.0?external=react,react-dom",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.7"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-rVyWkUBw.js"></script>
+</head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+</body>
+</html>
